@@ -35,7 +35,8 @@ public class TorpedoStore {
     }
 
     boolean success = false;
-
+    byte[] bytes = new byte[20];
+    random.nextBytes(bytes);
     double r = this.generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
